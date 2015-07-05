@@ -1,0 +1,12 @@
+D:\程式\myTaskScheduler\myTaskScheduler\myTaskScheduler\bin\Debug\myTaskScheduler.exe.config
+D:\程式\myTaskScheduler\myTaskScheduler\myTaskScheduler\bin\Debug\myTaskScheduler.exe
+D:\程式\myTaskScheduler\myTaskScheduler\myTaskScheduler\bin\Debug\myTaskScheduler.pdb
+D:\程式\myTaskScheduler\myTaskScheduler\myTaskScheduler\obj\Debug\myTaskScheduler.csprojResolveAssemblyReference.cache
+D:\程式\myTaskScheduler\myTaskScheduler\myTaskScheduler\obj\Debug\myTaskScheduler.frmMain.resources
+D:\程式\myTaskScheduler\myTaskScheduler\myTaskScheduler\obj\Debug\myTaskScheduler.Properties.Resources.resources
+D:\程式\myTaskScheduler\myTaskScheduler\myTaskScheduler\obj\Debug\myTaskScheduler.csproj.GenerateResource.Cache
+D:\程式\myTaskScheduler\myTaskScheduler\myTaskScheduler\obj\Debug\myTaskScheduler.exe
+D:\程式\myTaskScheduler\myTaskScheduler\myTaskScheduler\obj\Debug\myTaskScheduler.pdb
+D:\程式\myTaskScheduler-GitHub\myTaskScheduler\myTaskScheduler\bin\Debug\myTaskScheduler.exe.config
+D:\程式\myTaskScheduler-GitHub\myTaskScheduler\myTaskScheduler\obj\Debug\myTaskScheduler.exe
+D:\程式\myTaskScheduler-GitHub\myTaskScheduler\myTaskScheduler\obj\Debug\myTaskScheduler.pdb

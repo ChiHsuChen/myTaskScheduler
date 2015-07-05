@@ -1,0 +1,220 @@
+2015/07/05 00:08:42 timer interval set to 30000
+2015/07/05 00:08:42 loading config file OK - D:\程式\myTaskScheduler\myTaskScheduler\myTaskScheduler\bin\Debug\myTaskScheduler.ini
+2015/07/05 00:08:42 ap started successfully
+2015/07/05 00:09:50 current time not exceeds nextruntime. skip executing. AP=TESTAP;File=C:\TEST.BAT
+2015/07/05 00:09:51 [tmrTaskExecutor_Tick] Error System.NullReferenceException: 並未將物件參考設定為物件的執行個體。
+   於 myTaskScheduler.frmMain.tmrTaskExecutor_Tick(Object sender, EventArgs e) 於 d:\程式\myTaskScheduler\myTaskScheduler\myTaskScheduler\frmMain.cs: 行 168
+2015/07/05 00:09:55 ap closed
+2015/07/05 00:11:27 timer interval set to 30000
+2015/07/05 00:11:27 loading config file OK - D:\程式\myTaskScheduler\myTaskScheduler\myTaskScheduler\bin\Debug\myTaskScheduler.ini
+2015/07/05 00:11:27 ap started successfully
+2015/07/05 00:11:58 waiting for next run time. skip executing. AP=TESTAP;File=C:\TEST.BAT
+2015/07/05 00:11:58 [tmrTaskExecutor_Tick] Error System.NullReferenceException: 並未將物件參考設定為物件的執行個體。
+   於 myTaskScheduler.frmMain.tmrTaskExecutor_Tick(Object sender, EventArgs e) 於 d:\程式\myTaskScheduler\myTaskScheduler\myTaskScheduler\frmMain.cs: 行 168
+2015/07/05 00:12:02 ap closed
+2015/07/05 00:48:58 timer interval set to 30000
+2015/07/05 00:48:58 loading config file OK - D:\程式\myTaskScheduler\myTaskScheduler\myTaskScheduler\bin\Debug\myTaskScheduler.ini
+2015/07/05 00:48:58 ap started successfully
+2015/07/05 00:49:30 waiting for next run time. skip executing. AP=TESTAP;File=C:\TEST.BAT
+2015/07/05 00:49:30 [tmrTaskExecutor_Tick] Error System.NullReferenceException: 並未將物件參考設定為物件的執行個體。
+   於 myTaskScheduler.frmMain.tmrTaskExecutor_Tick(Object sender, EventArgs e) 於 d:\程式\myTaskScheduler\myTaskScheduler\myTaskScheduler\frmMain.cs: 行 168
+2015/07/05 00:49:47 ap closed
+2015/07/05 00:51:04 timer interval set to 30000
+2015/07/05 00:51:04 loading config file OK - D:\程式\myTaskScheduler\myTaskScheduler\myTaskScheduler\bin\Debug\myTaskScheduler.ini
+2015/07/05 00:51:04 ap started successfully
+2015/07/05 00:52:07 waiting for next run time. skip executing. AP=TESTAP;File=C:\TEST.BAT
+2015/07/05 00:53:45 timer interval set to 30000
+2015/07/05 00:53:45 loading config file OK - D:\程式\myTaskScheduler\myTaskScheduler\myTaskScheduler\bin\Debug\myTaskScheduler.ini
+2015/07/05 00:53:45 ap started successfully
+2015/07/05 00:54:17 waiting for next run time. skip executing. AP=TESTAP;File=C:\TEST.BAT
+2015/07/05 00:54:17 Task Running Summary: RunCount=0;NoRunCount=1;RunFailCount=0
+2015/07/05 00:54:32 ap closed
+2015/07/05 01:00:35 timer interval set to 30000
+2015/07/05 01:00:35 loading config file OK - D:\程式\myTaskScheduler\myTaskScheduler\myTaskScheduler\bin\Debug\myTaskScheduler.ini
+2015/07/05 01:00:35 ap started successfully
+2015/07/05 01:00:38 ap closed
+2015/07/05 10:14:49 timer interval set to 30000
+2015/07/05 10:14:49 loading config file OK - D:\程式\myTaskScheduler\myTaskScheduler\myTaskScheduler\bin\Debug\myTaskScheduler.ini
+2015/07/05 10:14:49 ap started successfully
+2015/07/05 10:14:52 ap closed
+2015/07/05 10:15:11 timer interval set to 30000
+2015/07/05 10:15:11 loading config file OK - D:\程式\myTaskScheduler\myTaskScheduler\myTaskScheduler\bin\Debug\myTaskScheduler.ini
+2015/07/05 10:15:11 ap started successfully
+2015/07/05 10:15:14 [btnStart_Click] timer started
+2015/07/05 10:15:15 [btnPause_Click] timer paused
+2015/07/05 10:15:17 ap closed
+2015/07/05 10:22:25 timer interval set to 30000
+2015/07/05 10:22:25 loading config file OK - D:\程式\myTaskScheduler\myTaskScheduler\myTaskScheduler\bin\Debug\myTaskScheduler.ini
+2015/07/05 10:22:25 ap started successfully
+2015/07/05 10:22:27 ap closed
+2015/07/05 10:23:39 timer interval set to 30000
+2015/07/05 10:23:39 loading config file OK - D:\程式\myTaskScheduler\myTaskScheduler\myTaskScheduler\bin\Debug\myTaskScheduler.ini
+2015/07/05 10:23:39 ap started successfully
+2015/07/05 10:28:45 ap closed
+2015/07/05 10:31:03 ap closed
+2015/07/05 10:31:29 ap closed
+2015/07/05 10:35:44 ap closed
+2015/07/05 10:37:06 timer interval set to 30000
+2015/07/05 10:37:06 loading config file OK - D:\程式\myTaskScheduler\myTaskScheduler\myTaskScheduler\bin\Debug\myTaskScheduler.ini
+2015/07/05 10:37:06 ap started successfully
+2015/07/05 10:37:11 ap closed
+2015/07/05 10:45:55 timer interval set to 30000
+2015/07/05 10:45:55 loading config file OK - D:\程式\myTaskScheduler\myTaskScheduler\myTaskScheduler\bin\Debug\myTaskScheduler.ini
+2015/07/05 10:45:55 ap started successfully
+2015/07/05 10:45:57 ap closed
+2015/07/05 10:49:01 timer interval set to 30000
+2015/07/05 10:49:01 loading config file OK - D:\程式\myTaskScheduler\myTaskScheduler\myTaskScheduler\bin\Debug\myTaskScheduler.ini
+2015/07/05 10:49:01 ap started successfully
+2015/07/05 10:49:15 [btnStart_Click] timer started
+2015/07/05 10:50:50 timer interval set to 30000
+2015/07/05 10:50:50 loading config file OK - D:\程式\myTaskScheduler\myTaskScheduler\myTaskScheduler\bin\Debug\myTaskScheduler.ini
+2015/07/05 10:50:50 ap started successfully
+2015/07/05 10:50:52 [btnStart_Click] timer started
+2015/07/05 10:52:36 executing task Success-AP=TESTAP;File=D:\TEST.BAT;LastRunTime=2015/07/05 10:50:50;NextRunTime=2015/07/05 10:51:50
+2015/07/05 10:52:36 Task Running Summary: RunCount=1;NoRunCount=0;RunFailCount=0
+2015/07/05 10:52:36 executing task Success-AP=TESTAP;File=D:\TEST.BAT;LastRunTime=2015/07/05 10:52:36;NextRunTime=2015/07/05 10:51:50
+2015/07/05 10:52:36 Task Running Summary: RunCount=1;NoRunCount=0;RunFailCount=0
+2015/07/05 10:57:07 timer interval set to 30000
+2015/07/05 10:57:07 loading config file OK - D:\程式\myTaskScheduler\myTaskScheduler\myTaskScheduler\bin\Debug\myTaskScheduler.ini
+2015/07/05 10:57:07 ap started successfully
+2015/07/05 10:57:14 ap closed
+2015/07/05 11:05:36 timer interval set to 30000
+2015/07/05 11:05:36 loading config file OK - D:\程式\myTaskScheduler\myTaskScheduler\myTaskScheduler\bin\Debug\myTaskScheduler.ini
+2015/07/05 11:05:36 ap started successfully
+2015/07/05 11:05:38 [btnStart_Click] timer started
+2015/07/05 11:06:08 waiting for next run time. skip. AP=TESTAP;File=D:\TEST.BAT
+2015/07/05 11:06:08 Task Running Summary: RunCount=0;NoRunCount=1;RunFailCount=0
+2015/07/05 11:08:53 timer interval set to 30000
+2015/07/05 11:08:53 loading config file OK - D:\程式\myTaskScheduler\myTaskScheduler\myTaskScheduler\bin\Debug\myTaskScheduler.ini
+2015/07/05 11:08:53 ap started successfully
+2015/07/05 11:08:54 [btnStart_Click] timer started
+2015/07/05 11:09:44 waiting for next run time. skip. AP=TESTAP;File=D:\TEST.BAT
+2015/07/05 11:09:44 Task Running Summary: RunCount=0;NoRunCount=1;RunFailCount=0
+2015/07/05 11:10:57 timer interval set to 30000
+2015/07/05 11:10:57 loading config file OK - D:\程式\myTaskScheduler\myTaskScheduler\myTaskScheduler\bin\Debug\myTaskScheduler.ini
+2015/07/05 11:10:57 ap started successfully
+2015/07/05 11:10:59 [btnStart_Click] timer started
+2015/07/05 11:11:34 waiting for next run time. skip. AP=TESTAP;File=D:\TEST.BAT
+2015/07/05 11:11:34 Task Running Summary: RunCount=0;NoRunCount=1;RunFailCount=0
+2015/07/05 11:12:14 executing task Success-AP=TESTAP;File=D:\TEST.BAT;LastRunTime=2015/07/05 11:10:57;NextRunTime=2015/07/05 11:11:57
+2015/07/05 11:12:14 Task Running Summary: RunCount=1;NoRunCount=0;RunFailCount=0
+2015/07/05 11:12:17 [btnPause_Click] timer paused
+2015/07/05 11:12:18 ap closed
+2015/07/05 11:13:50 timer interval set to 30000
+2015/07/05 11:13:50 loading config file OK - D:\程式\myTaskScheduler\myTaskScheduler\myTaskScheduler\bin\Debug\myTaskScheduler.ini
+2015/07/05 11:13:50 ap started successfully
+2015/07/05 11:13:52 ap closed
+2015/07/05 12:00:47 timer interval set to 30000
+2015/07/05 12:00:47 loading config file OK - D:\程式\myTaskScheduler\myTaskScheduler\myTaskScheduler\bin\Debug\myTaskScheduler.ini
+2015/07/05 12:00:47 ap started successfully
+2015/07/05 12:00:48 ap closed
+2015/07/05 12:03:50 timer interval set to 30000
+2015/07/05 12:03:50 loading config file OK - D:\程式\myTaskScheduler\myTaskScheduler\myTaskScheduler\bin\Debug\myTaskScheduler.ini
+2015/07/05 12:03:50 ap started successfully
+2015/07/05 12:03:51 [btnStart_Click] timer started
+2015/07/05 12:04:21 waiting for next run time. skip. AP=TESTAP;File=D:\TEST.BAT
+2015/07/05 12:04:21 Task Running Summary: RunCount=0;NoRunCount=1;RunFailCount=0
+2015/07/05 12:05:07 executing task Success-AP=TESTAP;File=D:\TEST.BAT;LastRunTime=2015/07/05 12:03:50;NextRunTime=2015/07/05 12:04:50;PID=6200
+2015/07/05 12:05:07 Task Running Summary: RunCount=1;NoRunCount=0;RunFailCount=0
+2015/07/05 12:05:10 [btnPause_Click] timer paused
+2015/07/05 12:05:10 ap closed
+2015/07/05 12:10:23 timer interval set to 30000
+2015/07/05 12:10:23 loading config file OK - D:\程式\myTaskScheduler\myTaskScheduler\myTaskScheduler\bin\Debug\myTaskScheduler.ini
+2015/07/05 12:10:23 ap started successfully
+2015/07/05 12:10:24 [btnStart_Click] timer started
+2015/07/05 12:10:54 waiting for next run time. skip. AP=TESTAP;File=D:\TEST.BAT
+2015/07/05 12:10:54 Task Running Summary: RunCount=0;NoRunCount=1;RunFailCount=0
+2015/07/05 12:11:24 executing task Success-AP=TESTAP;File=D:\TEST.BAT;LastRunTime=2015/07/05 12:10:23;NextRunTime=2015/07/05 12:11:23;PID=5056
+2015/07/05 12:11:24 Task Running Summary: RunCount=1;NoRunCount=0;RunFailCount=0
+2015/07/05 12:11:27 [btnPause_Click] timer paused
+2015/07/05 12:11:42 ap closed
+2015/07/05 12:15:26 timer interval set to 30000
+2015/07/05 12:15:26 loading config file OK - D:\程式\myTaskScheduler\myTaskScheduler\myTaskScheduler\bin\Debug\myTaskScheduler.ini
+2015/07/05 12:15:26 ap started successfully
+2015/07/05 12:15:37 ap closed
+2015/07/05 19:12:13 timer interval set to 30000
+2015/07/05 19:12:13 loading config file OK - D:\程式\myTaskScheduler\myTaskScheduler\myTaskScheduler\bin\Debug\myTaskScheduler.ini
+2015/07/05 19:12:13 ap started successfully
+2015/07/05 19:12:15 ap closed
+2015/07/05 19:12:38 timer interval set to 30000
+2015/07/05 19:12:38 loading config file OK - D:\程式\myTaskScheduler\myTaskScheduler\myTaskScheduler\bin\Debug\myTaskScheduler.ini
+2015/07/05 19:12:38 ap started successfully
+2015/07/05 19:12:40 ap closed
+2015/07/05 19:15:40 timer interval set to 30000
+2015/07/05 19:15:40 loading config file OK - D:\程式\myTaskScheduler\myTaskScheduler\myTaskScheduler\bin\Debug\myTaskScheduler.ini
+2015/07/05 19:15:40 ap started successfully
+2015/07/05 19:15:48 ap closed
+2015/07/05 19:16:39 timer interval set to 30000
+2015/07/05 19:16:39 loading config file OK - D:\程式\myTaskScheduler\myTaskScheduler\myTaskScheduler\bin\Debug\myTaskScheduler.ini
+2015/07/05 19:16:39 ap started successfully
+2015/07/05 19:16:42 [btnStart_Click] timer started
+2015/07/05 19:17:12 waiting for next run time. skip. AP=TESTAP;File=D:\TEST.BAT
+2015/07/05 19:17:12 Task Running Summary: RunCount=0;NoRunCount=1;RunFailCount=0
+2015/07/05 19:17:42 executing task Success-AP=TESTAP;File=D:\TEST.BAT;LastRunTime=2015/07/05 19:16:39;NextRunTime=2015/07/05 19:17:39;PID=4996
+2015/07/05 19:17:42 Task Running Summary: RunCount=1;NoRunCount=0;RunFailCount=0
+2015/07/05 19:17:46 [btnPause_Click] timer paused
+2015/07/05 19:17:48 ap closed
+2015/07/05 19:46:11 timer interval set to 30000
+2015/07/05 19:46:11 loading config file OK - D:\程式\myTaskScheduler\myTaskScheduler\myTaskScheduler\bin\Debug\myTaskScheduler.ini
+2015/07/05 19:46:11 ap started successfully
+2015/07/05 19:46:14 [btnStart_Click] timer started
+2015/07/05 19:46:44 waiting for next run time. skip. AP=TESTAP;File=D:\TEST.BAT
+2015/07/05 19:46:44 Task Running Summary: RunCount=0;NoRunCount=1;RunFailCount=0
+2015/07/05 19:47:14 executing task Success-AP=TESTAP;File=D:\TEST.BAT;LastRunTime=2015/07/05 19:46:10;NextRunTime=2015/07/05 19:47:10;PID=2660
+2015/07/05 19:47:14 Task Running Summary: RunCount=1;NoRunCount=0;RunFailCount=0
+2015/07/05 19:47:44 executing task Success-AP=TESTAP;File=D:\TEST.BAT;LastRunTime=2015/07/05 19:47:14;NextRunTime=2015/07/05 19:47:10;PID=6308
+2015/07/05 19:47:44 [tmrTaskExecutor_Tick] Error System.FormatException: 輸入字串格式不正確。
+   於 System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   於 System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   於 System.Int32.Parse(String s)
+   於 myTaskScheduler.frmMain.tmrTaskExecutor_Tick(Object sender, EventArgs e) 於 d:\程式\myTaskScheduler\myTaskScheduler\myTaskScheduler\frmMain.cs: 行 180
+2015/07/05 19:51:06 timer interval set to 30000
+2015/07/05 19:51:06 loading config file OK - D:\程式\myTaskScheduler\myTaskScheduler\myTaskScheduler\bin\Debug\myTaskScheduler.ini
+2015/07/05 19:51:06 ap started successfully
+2015/07/05 19:51:08 [btnStart_Click] timer started
+2015/07/05 19:51:53 waiting for next run time. skip. AP=TESTAP;File=D:\TEST.BAT
+2015/07/05 19:51:53 Task Running Summary: RunCount=0;NoRunCount=1;RunFailCount=0
+2015/07/05 19:52:13 executing task Success-AP=TESTAP;File=D:\TEST.BAT;LastRunTime=2015/07/05 19:51:06;NextRunTime=2015/07/05 19:52:06;PID=5568
+2015/07/05 19:52:13 Task Running Summary: RunCount=1;NoRunCount=0;RunFailCount=0
+2015/07/05 19:52:42 executing task Success-AP=TESTAP;File=D:\TEST.BAT;LastRunTime=2015/07/05 19:52:13;NextRunTime=2015/07/05 19:52:06;PID=2652
+2015/07/05 19:52:42 Task Running Summary: RunCount=1;NoRunCount=0;RunFailCount=0
+2015/07/05 19:53:11 waiting for next run time. skip. AP=TESTAP;File=D:\TEST.BAT
+2015/07/05 19:53:11 Task Running Summary: RunCount=0;NoRunCount=1;RunFailCount=0
+2015/07/05 19:53:25 [btnPause_Click] timer paused
+2015/07/05 19:53:26 ap closed
+2015/07/05 19:54:22 timer interval set to 30000
+2015/07/05 19:54:22 loading config file OK - D:\程式\myTaskScheduler\myTaskScheduler\myTaskScheduler\bin\Debug\myTaskScheduler.ini
+2015/07/05 19:54:22 ap started successfully
+2015/07/05 19:54:25 [btnStart_Click] timer started
+2015/07/05 19:55:36 executing task Success-AP=TESTAP;File=D:\TEST.BAT;LastRunTime=2015/07/05 19:54:22;NextRunTime=2015/07/05 19:55:22;PID=7116
+2015/07/05 19:55:36 Task Running Summary: RunCount=1;NoRunCount=0;RunFailCount=0
+2015/07/05 19:55:48 executing task Success-AP=TESTAP;File=D:\TEST.BAT;LastRunTime=2015/07/05 19:55:36;NextRunTime=2015/07/05 19:55:22;PID=7088
+2015/07/05 19:55:48 Task Running Summary: RunCount=1;NoRunCount=0;RunFailCount=0
+2015/07/05 19:56:02 waiting for next run time. skip. AP=TESTAP;File=D:\TEST.BAT
+2015/07/05 19:56:02 Task Running Summary: RunCount=0;NoRunCount=1;RunFailCount=0
+2015/07/05 19:56:27 waiting for next run time. skip. AP=TESTAP;File=D:\TEST.BAT
+2015/07/05 19:56:27 Task Running Summary: RunCount=0;NoRunCount=1;RunFailCount=0
+2015/07/05 19:56:55 executing task Success-AP=TESTAP;File=D:\TEST.BAT;LastRunTime=2015/07/05 19:55:48;NextRunTime=2015/07/05 19:56:36;PID=4044
+2015/07/05 19:56:55 Task Running Summary: RunCount=1;NoRunCount=0;RunFailCount=0
+2015/07/05 19:56:58 ap closed
+2015/07/05 20:02:18 timer interval set to 30000
+2015/07/05 20:02:18 loading config file OK - D:\程式\myTaskScheduler\myTaskScheduler\myTaskScheduler\bin\Debug\myTaskScheduler.ini
+2015/07/05 20:02:18 ap started successfully
+2015/07/05 20:02:19 [btnStart_Click] timer started
+2015/07/05 20:02:49 waiting for next run time. skip. AP=TESTAP;File=D:\TEST.BAT
+2015/07/05 20:02:49 Task Running Summary: RunCount=0;NoRunCount=1;RunFailCount=0
+2015/07/05 20:03:19 executing task Success-AP=TESTAP;File=D:\TEST.BAT;LastRunTime=2015/07/05 20:02:18;NextRunTime=2015/07/05 20:03:18;PID=1444
+2015/07/05 20:03:19 Task Running Summary: RunCount=1;NoRunCount=0;RunFailCount=0
+2015/07/05 20:03:30 [btnPause_Click] timer paused
+2015/07/05 20:03:31 ap closed
+2015/07/05 20:18:54 timer interval set to 30000
+2015/07/05 20:18:54 loading config file OK - D:\程式\myTaskScheduler\myTaskScheduler\myTaskScheduler\bin\Debug\myTaskScheduler.ini
+2015/07/05 20:18:54 ap started successfully
+2015/07/05 20:18:58 ap closed
+2015/07/05 22:42:59 timer interval set to 30000
+2015/07/05 22:42:59 loading config file OK - D:\程式\myTaskScheduler\myTaskScheduler\myTaskScheduler\bin\Debug\myTaskScheduler.ini
+2015/07/05 22:42:59 ap started successfully
+2015/07/05 22:43:02 ap closed
+2015/07/05 22:43:06 timer interval set to 30000
+2015/07/05 22:43:06 loading config file OK - D:\程式\myTaskScheduler\myTaskScheduler\myTaskScheduler\bin\Debug\myTaskScheduler.ini
+2015/07/05 22:43:06 ap started successfully
