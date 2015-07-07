@@ -21,6 +21,7 @@ namespace myTaskScheduler
 
         private string logPath;
         private System.IO.StreamWriter oLogger;
+        private string lsCurrentDay;
 
         public Log(string lsLogPath)
         {
@@ -29,7 +30,8 @@ namespace myTaskScheduler
             {
                 logPath = lsLogPath;
                 checkLogFolder(lsLogPath);
-                lsLogFileFullFileName = logPath + "\\" + getLogFileName() + _LOG_FILE_EXT;
+                lsCurrentDay = getLogFileName();
+                lsLogFileFullFileName = logPath + "\\" + lsCurrentDay + _LOG_FILE_EXT;
                 oLogger = new System.IO.StreamWriter(lsLogFileFullFileName, true, Encoding.Default);
 
                 return;
@@ -46,10 +48,11 @@ namespace myTaskScheduler
             {
                 string lsLogFileFullFileName;
 
-                if (getLogFileName() != DateTime.Now.ToString(_YYYYMMDD))
+                if (getLogFileName() != lsCurrentDay)
                 {
                     oLogger.Close();
-                    lsLogFileFullFileName = logPath + "\\" + getLogFileName() + _LOG_FILE_EXT;
+                    lsCurrentDay = getLogFileName();
+                    lsLogFileFullFileName = logPath + "\\" + lsCurrentDay + _LOG_FILE_EXT;
                     oLogger = new System.IO.StreamWriter(lsLogFileFullFileName, true, Encoding.Default);
                 }
 

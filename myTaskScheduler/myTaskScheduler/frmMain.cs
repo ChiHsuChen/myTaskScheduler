@@ -220,7 +220,7 @@ namespace myTaskScheduler
 
                         // refresh
                         r.Cells[_COL_TASK_LASTRUNTIME].Value = DateTime.Now.ToString(_24H_TIME_FORMAT);
-                        r.Cells[_COL_TASK_NEXTRUNTIME].Value = (DateTime.Parse(lsLastRunTime).AddMinutes(double.Parse(lsInterval.ToString()))).ToString(_24H_TIME_FORMAT);
+                        r.Cells[_COL_TASK_NEXTRUNTIME].Value = (DateTime.Parse(r.Cells[_COL_TASK_LASTRUNTIME].Value.ToString()).AddMinutes(double.Parse(lsInterval.ToString()))).ToString(_24H_TIME_FORMAT);
                     }
                     else  // not exceeding next run time
                     {

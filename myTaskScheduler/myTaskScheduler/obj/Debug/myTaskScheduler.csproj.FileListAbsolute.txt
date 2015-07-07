@@ -10,3 +10,6 @@ D:\程式\myTaskScheduler\myTaskScheduler\myTaskScheduler\obj\Debug\myTaskSchedu
 D:\程式\myTaskScheduler-GitHub\myTaskScheduler\myTaskScheduler\bin\Debug\myTaskScheduler.exe.config
 D:\程式\myTaskScheduler-GitHub\myTaskScheduler\myTaskScheduler\obj\Debug\myTaskScheduler.exe
 D:\程式\myTaskScheduler-GitHub\myTaskScheduler\myTaskScheduler\obj\Debug\myTaskScheduler.pdb
+C:\Users\ChiHsuChen\Documents\GitHub\myTaskScheduler\myTaskScheduler\myTaskScheduler\bin\Debug\myTaskScheduler.exe.config
+C:\Users\ChiHsuChen\Documents\GitHub\myTaskScheduler\myTaskScheduler\myTaskScheduler\obj\Debug\myTaskScheduler.exe
+C:\Users\ChiHsuChen\Documents\GitHub\myTaskScheduler\myTaskScheduler\myTaskScheduler\obj\Debug\myTaskScheduler.pdb
