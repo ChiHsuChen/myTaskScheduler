@@ -304,5 +304,20 @@ namespace myTaskScheduler
             if (lsToken == false)  // if still running some task, don't close ap
                 e.Cancel = true;
         }
+
+        private void frmMain_Resize(object sender, EventArgs e)
+        {
+            tabControl1.Height = this.Height - (btnStart.Height + statusStrip1.Height + 20) - btnPause.Height;
+            tabControl1.Width = this.Width - 20;
+
+            btnPause.Left = (this.Width - (btnPause.Width + 20));
+            btnPause.Top = (tabControl1.Top + tabControl1.Height);
+
+            btnStart.Left = (this.Width - (btnStart.Width + 20) * 2);
+            btnStart.Top = (tabControl1.Top + tabControl1.Height);
+
+            dgrTaskList.Height = tabControl1.Height - 30;
+            dgrTaskList.Width = tabControl1.Width - 20;
+        }
     }
 }
