@@ -19,8 +19,15 @@ namespace myTaskScheduler
         private Boolean lsAutoStart = false;
         private const char _INI_COL_DELIMITER = ',';
         private const char _INI_CONFIGITEM_DELIMITER = '=';
+        private string INIPath;
 
         public APConfig(string lsINIPath)
+        {
+            INIPath = lsINIPath;
+            load(lsINIPath);
+        }
+
+        private void load(string lsINIPath)
         {
             try
             {
@@ -58,7 +65,7 @@ namespace myTaskScheduler
 
                     // to read Task info
                     if (lsItem[0].StartsWith("AP") == true)
-                    {                        
+                    {
                         lsValue = lsItem[1].Split(_INI_COL_DELIMITER);
                         tmpConfig.lsAPName = "";
                         tmpConfig.lsFilePath = "";
@@ -78,7 +85,7 @@ namespace myTaskScheduler
                     }
                 }
                 oINIReader.Close();
-                
+
                 return;
             }
             catch (Exception ex)
@@ -96,6 +103,13 @@ namespace myTaskScheduler
         {
             get { return lsAutoStart; }
             set { lsAutoStart = value; }
+        }
+
+        public void ReloadTaskFromINI()
+        {
+            myConfig.Clear();
+            load(INIPath);
+            return;
         }
     }
 }
