@@ -425,5 +425,23 @@ namespace myTaskScheduler
                 myLog.WriteLog("[disableToolStripMenuItem_Click]-Error " + ex.ToString());
             }
         }
+
+        private void enableToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                foreach (DataGridViewRow r in dgrTaskList.SelectedRows)
+                {
+                    r.Cells[_COL_TASK_ENABLED].Value = "Y";
+                    r.Cells[_COL_TASK_ENABLED].Style.BackColor = Color.White;
+                }
+
+                return;
+            }
+            catch (Exception ex)
+            {
+                myLog.WriteLog("[enableToolStripMenuItem_Click]-Error " + ex.ToString());
+            }
+        }
     }
 }

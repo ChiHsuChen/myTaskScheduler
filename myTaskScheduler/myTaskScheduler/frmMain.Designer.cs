@@ -40,10 +40,10 @@
             this.btnStart = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.startImmediatelyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnReloadINI = new System.Windows.Forms.Button();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.enableToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.disableToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
+            this.btnReloadINI = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgrTaskList)).BeginInit();
@@ -147,6 +147,25 @@
             this.startImmediatelyToolStripMenuItem.Text = "Start Task Immediately";
             this.startImmediatelyToolStripMenuItem.Click += new System.EventHandler(this.startImmediatelyToolStripMenuItem_Click);
             // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(200, 6);
+            // 
+            // enableToolStripMenuItem
+            // 
+            this.enableToolStripMenuItem.Name = "enableToolStripMenuItem";
+            this.enableToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
+            this.enableToolStripMenuItem.Text = "Enable Task";
+            this.enableToolStripMenuItem.Click += new System.EventHandler(this.enableToolStripMenuItem_Click);
+            // 
+            // disableToolStripMenuItem
+            // 
+            this.disableToolStripMenuItem.Name = "disableToolStripMenuItem";
+            this.disableToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
+            this.disableToolStripMenuItem.Text = "Disable Task";
+            this.disableToolStripMenuItem.Click += new System.EventHandler(this.disableToolStripMenuItem_Click);
+            // 
             // btnReloadINI
             // 
             this.btnReloadINI.Location = new System.Drawing.Point(383, 269);
@@ -156,24 +175,6 @@
             this.btnReloadINI.Text = "Reload INI";
             this.btnReloadINI.UseVisualStyleBackColor = true;
             this.btnReloadINI.Click += new System.EventHandler(this.btnReloadINI_Click);
-            // 
-            // enableToolStripMenuItem
-            // 
-            this.enableToolStripMenuItem.Name = "enableToolStripMenuItem";
-            this.enableToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
-            this.enableToolStripMenuItem.Text = "Enable Task";
-            // 
-            // disableToolStripMenuItem
-            // 
-            this.disableToolStripMenuItem.Name = "disableToolStripMenuItem";
-            this.disableToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
-            this.disableToolStripMenuItem.Text = "Disable Task";
-            this.disableToolStripMenuItem.Click += new System.EventHandler(this.disableToolStripMenuItem_Click);
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(200, 6);
             // 
             // frmMain
             // 
