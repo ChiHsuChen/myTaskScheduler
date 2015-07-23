@@ -38,10 +38,17 @@
             this.tmrShowTime = new System.Windows.Forms.Timer(this.components);
             this.btnPause = new System.Windows.Forms.Button();
             this.btnStart = new System.Windows.Forms.Button();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.startImmediatelyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
+            this.enableToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.disableToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnReloadINI = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgrTaskList)).BeginInit();
             this.statusStrip1.SuspendLayout();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -69,9 +76,13 @@
             this.dgrTaskList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgrTaskList.Location = new System.Drawing.Point(8, 6);
             this.dgrTaskList.Name = "dgrTaskList";
+            this.dgrTaskList.ReadOnly = true;
             this.dgrTaskList.RowTemplate.Height = 24;
             this.dgrTaskList.Size = new System.Drawing.Size(777, 229);
             this.dgrTaskList.TabIndex = 0;
+            this.dgrTaskList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgrTaskList_CellClick);
+            this.dgrTaskList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgrTaskList_CellContentClick);
+            this.dgrTaskList.MouseUp += new System.Windows.Forms.MouseEventHandler(this.dgrTaskList_MouseUp);
             // 
             // tmrTaskExecutor
             // 
@@ -119,16 +130,62 @@
             this.btnStart.UseVisualStyleBackColor = true;
             this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.startImmediatelyToolStripMenuItem,
+            this.toolStripMenuItem1,
+            this.enableToolStripMenuItem,
+            this.disableToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(204, 98);
+            // 
+            // startImmediatelyToolStripMenuItem
+            // 
+            this.startImmediatelyToolStripMenuItem.Name = "startImmediatelyToolStripMenuItem";
+            this.startImmediatelyToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
+            this.startImmediatelyToolStripMenuItem.Text = "Start Task Immediately";
+            this.startImmediatelyToolStripMenuItem.Click += new System.EventHandler(this.startImmediatelyToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(200, 6);
+            // 
+            // enableToolStripMenuItem
+            // 
+            this.enableToolStripMenuItem.Name = "enableToolStripMenuItem";
+            this.enableToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
+            this.enableToolStripMenuItem.Text = "Enable Task";
+            this.enableToolStripMenuItem.Click += new System.EventHandler(this.enableToolStripMenuItem_Click);
+            // 
+            // disableToolStripMenuItem
+            // 
+            this.disableToolStripMenuItem.Name = "disableToolStripMenuItem";
+            this.disableToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
+            this.disableToolStripMenuItem.Text = "Disable Task";
+            this.disableToolStripMenuItem.Click += new System.EventHandler(this.disableToolStripMenuItem_Click);
+            // 
+            // btnReloadINI
+            // 
+            this.btnReloadINI.Location = new System.Drawing.Point(383, 269);
+            this.btnReloadINI.Name = "btnReloadINI";
+            this.btnReloadINI.Size = new System.Drawing.Size(131, 35);
+            this.btnReloadINI.TabIndex = 4;
+            this.btnReloadINI.Text = "Reload INI";
+            this.btnReloadINI.UseVisualStyleBackColor = true;
+            this.btnReloadINI.Click += new System.EventHandler(this.btnReloadINI_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 331);
+            this.Controls.Add(this.btnReloadINI);
             this.Controls.Add(this.btnStart);
             this.Controls.Add(this.btnPause);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.tabControl1);
-            this.MaximizeBox = false;
             this.Name = "frmMain";
             this.Text = "Task Scheduler";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMain_FormClosing);
@@ -139,6 +196,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgrTaskList)).EndInit();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -155,6 +213,12 @@
         private System.Windows.Forms.ToolStripStatusLabel slblShowCurrentTime;
         private System.Windows.Forms.Button btnPause;
         private System.Windows.Forms.Button btnStart;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem startImmediatelyToolStripMenuItem;
+        private System.Windows.Forms.Button btnReloadINI;
+        private System.Windows.Forms.ToolStripMenuItem enableToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem disableToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
     }
 }
 

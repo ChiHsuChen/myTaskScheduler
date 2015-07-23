@@ -13,3 +13,9 @@ D:\程式\myTaskScheduler-GitHub\myTaskScheduler\myTaskScheduler\obj\Debug\myTas
 C:\Users\ChiHsuChen\Documents\GitHub\myTaskScheduler\myTaskScheduler\myTaskScheduler\bin\Debug\myTaskScheduler.exe.config
 C:\Users\ChiHsuChen\Documents\GitHub\myTaskScheduler\myTaskScheduler\myTaskScheduler\obj\Debug\myTaskScheduler.exe
 C:\Users\ChiHsuChen\Documents\GitHub\myTaskScheduler\myTaskScheduler\myTaskScheduler\obj\Debug\myTaskScheduler.pdb
+C:\Users\ChiHsuChen\Documents\GitHub\myTaskScheduler\myTaskScheduler\myTaskScheduler\bin\Debug\myTaskScheduler.exe
+C:\Users\ChiHsuChen\Documents\GitHub\myTaskScheduler\myTaskScheduler\myTaskScheduler\bin\Debug\myTaskScheduler.pdb
+C:\Users\ChiHsuChen\Documents\GitHub\myTaskScheduler\myTaskScheduler\myTaskScheduler\obj\Debug\myTaskScheduler.csprojResolveAssemblyReference.cache
+C:\Users\ChiHsuChen\Documents\GitHub\myTaskScheduler\myTaskScheduler\myTaskScheduler\obj\Debug\myTaskScheduler.frmMain.resources
+C:\Users\ChiHsuChen\Documents\GitHub\myTaskScheduler\myTaskScheduler\myTaskScheduler\obj\Debug\myTaskScheduler.Properties.Resources.resources
+C:\Users\ChiHsuChen\Documents\GitHub\myTaskScheduler\myTaskScheduler\myTaskScheduler\obj\Debug\myTaskScheduler.csproj.GenerateResource.Cache

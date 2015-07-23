@@ -20,7 +20,7 @@ namespace myTaskScheduler
     public partial class frmMain : Form
     {
         // columns defined for a task
-        private readonly string[] _COL_TASK_LIST = { "AppName", "FilePath", "Interval(Min.)", "WorkingDir", "Arguments", "LastRunTime", "NextRunTime", "Status" };
+        private readonly string[] _COL_TASK_LIST = { "AppName", "FilePath", "Interval(Min.)", "WorkingDir", "Arguments", "LastRunTime", "NextRunTime", "Status", "Enabled" };
 
         // column position initialization
         private const int _COL_TASK_APPNAME = 0;
@@ -31,12 +31,16 @@ namespace myTaskScheduler
         private const int _COL_TASK_LASTRUNTIME = 5;
         private const int _COL_TASK_NEXTRUNTIME = 6;
         private const int _COL_TASK_STATUS = 7;
+        private const int _COL_TASK_ENABLED = 8;
         private const string _INI_FILE = "myTaskScheduler.ini";
         private const string _24H_TIME_FORMAT = "yyyy/MM/dd HH:mm:ss";
 
         private List<BasicTask> lsTaskList;   // list that stored tasks
         private Log myLog;
         private Boolean lsToken;
+
+        private APConfig lsConfig;
+        private string lsINIPath;
 
         private void showErrorMessage(Exception ex)
         {
@@ -50,7 +54,7 @@ namespace myTaskScheduler
             try
             {
                 DataColumn lsCol;
-
+                
                 if (lsTable.Columns.Count == 0)
                     lsTable.Columns.Clear();
 
@@ -92,6 +96,7 @@ namespace myTaskScheduler
                     lsRow[_COL_TASK_LASTRUNTIME] = DateTime.Now.ToString(_24H_TIME_FORMAT);
                     lsRow[_COL_TASK_NEXTRUNTIME] = (DateTime.Parse(lsRow[_COL_TASK_LASTRUNTIME].ToString()).AddMinutes(double.Parse(T.lsInterval))).ToString(_24H_TIME_FORMAT);
                     lsRow[_COL_TASK_STATUS] = "Ready";
+                    lsRow[_COL_TASK_ENABLED] = "Y";
 
                     lsTaskView.Rows.Add(lsRow);
                 }
@@ -106,59 +111,7 @@ namespace myTaskScheduler
             }
         }
 
-        public frmMain()
-        {
-            APConfig lsConfig;
-            string lsINIPath;
-
-            InitializeComponent();
-
-            try
-            {
-                // init form basic info.
-                this.Text = "Simple Task Scheduler- v" + Application.ProductVersion;
-                this.Left = (Screen.GetWorkingArea(this).Width - this.Width) / 2;
-                this.Top = (Screen.GetWorkingArea(this).Height - this.Height) / 2;
-
-                // init logging
-                myLog = new Log(Application.StartupPath + "\\Log");
-                
-                // read ini
-                lsINIPath = Application.StartupPath + "\\" + _INI_FILE;
-                if (System.IO.File.Exists(lsINIPath) == false)
-                {
-                    MessageBox.Show("INI " + lsINIPath + " NOT EXIST!", this.Text, MessageBoxButtons.OK);
-                    return;
-                }
-                else
-                {
-                    lsConfig = new APConfig(lsINIPath);
-                }
-
-                // get task info from ini
-                lsTaskList = lsConfig.getConfig();
-                loadTaskInfoIntoGrid(dgrTaskList);
-                tmrTaskExecutor.Interval = 30000;
-                lsToken = true;
-                if (lsConfig.AutoStart)
-                {
-                    btnStart_Click(null, null);
-                    myLog.WriteLog("autostart set to true. auto enable tmrTaskExecutor");
-                }
-
-                myLog.WriteLog("timer interval set to " + tmrTaskExecutor.Interval.ToString());
-                myLog.WriteLog("loading config file OK - " + lsINIPath);
-                myLog.WriteLog("ap started successfully");
-                
-                return;
-            }
-            catch (Exception ex)
-            {
-                showErrorMessage(ex);
-            }
-        }
-
-        private void tmrTaskExecutor_Tick(object sender, EventArgs e)
+        private void doExecuteTask(Boolean isStartImmediately)
         {
             string lsLastRunTime;
             string lsNextRunTime;
@@ -169,20 +122,21 @@ namespace myTaskScheduler
             ProcessStartInfo lsProc;
             Process lsProcInfo;
 
-            try 
+            try
             {
                 if (lsToken == false) return;   // check if last event not finished
 
-                lsToken = false;                
+                lsToken = false;
                 foreach (DataGridViewRow r in dgrTaskList.Rows)
                 {
                     if (r.Cells[_COL_TASK_APPNAME].Value == null || r.Cells[_COL_TASK_APPNAME].Value.ToString() == "") break;
+                    if (r.Cells[_COL_TASK_ENABLED].Value.ToString() == "N") continue;
 
                     lsNextRunTime = r.Cells[_COL_TASK_NEXTRUNTIME].Value.ToString();
                     lsLastRunTime = r.Cells[_COL_TASK_LASTRUNTIME].Value.ToString();
                     lsInterval = int.Parse(r.Cells[_COL_TASK_INTERVAL].Value.ToString());
 
-                    if (DateTime.Now > DateTime.Parse(lsNextRunTime))
+                    if ((DateTime.Now > DateTime.Parse(lsNextRunTime)) || isStartImmediately)
                     {
                         // check if file to execute exist or not
                         if (System.IO.File.Exists(r.Cells[_COL_TASK_FILEPATH].Value.ToString()) == true)
@@ -240,8 +194,64 @@ namespace myTaskScheduler
             }
             catch (Exception ex)
             {
-                myLog.WriteLog("[tmrTaskExecutor_Tick] Error " + ex.ToString());
+                myLog.WriteLog("[doExecuteTask] Error " + ex.ToString());
             }
+        }
+
+        public frmMain()
+        {
+            InitializeComponent();
+
+            try
+            {
+                // init form basic info.
+                this.Text = "Simple Task Scheduler- v" + Application.ProductVersion;
+                this.Left = (Screen.GetWorkingArea(this).Width - this.Width) / 2;
+                this.Top = (Screen.GetWorkingArea(this).Height - this.Height) / 2;
+
+                // init logging
+                myLog = new Log(Application.StartupPath + "\\Log");
+                
+                // read ini
+                lsINIPath = Application.StartupPath + "\\" + _INI_FILE;
+                if (System.IO.File.Exists(lsINIPath) == false)
+                {
+                    MessageBox.Show("INI " + lsINIPath + " NOT EXIST!", this.Text, MessageBoxButtons.OK);
+                    return;
+                }
+                else
+                {
+                    lsConfig = new APConfig(lsINIPath);
+                }
+
+                // get task info from ini
+                lsTaskList = lsConfig.getConfig();
+                loadTaskInfoIntoGrid(dgrTaskList);
+                tmrTaskExecutor.Interval = 30000;
+                lsToken = true;
+                if (lsConfig.AutoStart)
+                {
+                    btnStart_Click(null, null);
+                    myLog.WriteLog("autostart set to true. auto enable tmrTaskExecutor");
+                }
+
+                myLog.WriteLog("timer interval set to " + tmrTaskExecutor.Interval.ToString());
+                myLog.WriteLog("loading config file OK - " + lsINIPath);
+                myLog.WriteLog("ap started successfully");
+                
+                return;
+            }
+            catch (Exception ex)
+            {
+                showErrorMessage(ex);
+            }
+        }
+
+        private void tmrTaskExecutor_Tick(object sender, EventArgs e)
+        {
+            doExecuteTask(false);
+
+            return;
         }
 
         private void tmrShowTime_Tick(object sender, EventArgs e)
@@ -316,8 +326,122 @@ namespace myTaskScheduler
             btnStart.Left = (this.Width - (btnStart.Width + 20) * 2);
             btnStart.Top = (tabControl1.Top + tabControl1.Height);
 
+            btnReloadINI.Left = (this.Width - (btnReloadINI.Width + 20) * 3);
+            btnReloadINI.Top = (tabControl1.Top + tabControl1.Height);
+
             dgrTaskList.Height = tabControl1.Height - 30;
             dgrTaskList.Width = tabControl1.Width - 20;
+
+            return;
+        }
+
+        private void dgrTaskList_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (e.Button == System.Windows.Forms.MouseButtons.Right)
+                contextMenuStrip1.Show(MousePosition);
+
+            return;
+        }
+
+        private void startImmediatelyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            doExecuteTask(true);
+
+            return;
+        }
+
+        private void dgrTaskList_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                if (e.ColumnIndex == _COL_TASK_ENABLED)
+                {
+                    if (dgrTaskList.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString() == "Y")
+                    {
+                        dgrTaskList.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = "N";
+                        dgrTaskList.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.Red;
+                    }
+                    else
+                    {
+                        dgrTaskList.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = "Y";
+                    }
+                }
+
+                return;
+            }
+            catch (Exception ex)
+            {
+                myLog.WriteLog("[dgrTaskList_CellContentClick]-Error " + ex.ToString());
+            }
+        }
+
+        private void btnReloadINI_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                lsConfig.ReloadTaskFromINI();
+                lsTaskList = lsConfig.getConfig();
+                loadTaskInfoIntoGrid(dgrTaskList);
+
+                return;
+            }
+            catch (Exception ex)
+            {
+                myLog.WriteLog("[btnReloadINI_Click]-Error " + ex.ToString());
+            }
+        }
+
+        private void dgrTaskList_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                foreach (DataGridViewRow r in dgrTaskList.SelectedRows)
+                {
+                    r.Cells[_COL_TASK_ENABLED].Value = "Y";
+                }
+
+                return;
+            }
+            catch (Exception ex)
+            {
+                myLog.WriteLog("[enableToolStripMenuItem_Click]-Error " + ex.ToString());
+            }
+        }
+
+        private void disableToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                foreach (DataGridViewRow r in dgrTaskList.SelectedRows)
+                {
+                    r.Cells[_COL_TASK_ENABLED].Value = "N";
+                    r.Cells[_COL_TASK_ENABLED].Style.BackColor = Color.Red;
+                }
+
+                return;
+            }
+            catch (Exception ex)
+            {
+                myLog.WriteLog("[disableToolStripMenuItem_Click]-Error " + ex.ToString());
+            }
+        }
+
+        private void enableToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                foreach (DataGridViewRow r in dgrTaskList.SelectedRows)
+                {
+                    r.Cells[_COL_TASK_ENABLED].Value = "Y";
+                    r.Cells[_COL_TASK_ENABLED].Style.BackColor = Color.White;
+                }
+
+                return;
+            }
+            catch (Exception ex)
+            {
+                myLog.WriteLog("[enableToolStripMenuItem_Click]-Error " + ex.ToString());
+            }
         }
     }
 }
